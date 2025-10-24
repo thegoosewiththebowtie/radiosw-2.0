@@ -1,0 +1,227 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             Width="800" Height="600"
+             x:Class="radiosw.Views.OnView">
+    <Grid
+        RowDefinitions="Auto, *"
+        ColumnDefinitions="Auto, *">
+        <Grid
+            Background="Black"
+            ShowGridLines="False"
+            RowDefinitions="20, 60, 290, 30, 120, 80"
+            ColumnDefinitions="100, 150, 100, 350">
+            <StackPanel
+                Height="350"
+                Width="350"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                ZIndex="3"
+                Grid.Row="2"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3">
+                <TextBlock
+                    Margin="0,0,0,0"
+                    Height="70"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap"
+                    FontSize="22"
+                    FontFamily="VT323">
+                    Triangle on The Wall Organization®
+                </TextBlock>
+                <TextBlock
+                    Height="83"
+                    FontFamily="VT323"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap"
+                    FontSize="100">
+                    RadioSW
+                </TextBlock>
+                <TextBlock
+                    Margin="0,0,0,25"
+                    FontFamily="VT323"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap"
+                    FontSize="20">
+                    for Home-Podcast-Station 1.0
+                </TextBlock>
+                <Grid
+                    Height="100">
+                    <TextBlock
+                        VerticalAlignment="Bottom"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap"
+                        FontSize="15"
+                        FontFamily="VT323">
+                        Copyright(C) Triangle on The Wall organization, TE000. All rights reserved. ToTw, RadioSW and Home Podcast Station are registered trademarks of ToTW org.
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+            <Rectangle
+                Name="IDSTBG"
+                HorizontalAlignment="Center"
+                ZIndex="-1"
+                Width="350"
+                Height="350"
+                Fill="Chartreuse"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3" />
+            <ProgressBar
+                CornerRadius="0"
+                Name="Bar"
+                IsIndeterminate="True"
+                Background="#101010"
+                Foreground="Chartreuse"
+                Grid.Column="1"
+                Grid.Row="3"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Stretch" />
+            <TextBlock
+                ZIndex="-1"
+                FontFamily="DSEG14 Classic"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="Chartreuse"
+                Grid.Row="3"
+                Grid.Column="0">
+                ~~:~~
+            </TextBlock>
+            <TextBlock
+                ZIndex="-1"
+                FontFamily="DSEG14 Classic"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="Chartreuse"
+                Grid.Column="2"
+                Grid.Row="3">
+                ~~:~~
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="9,0,9,0"
+                ZIndex="-1"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="Chartreuse"
+                FontSize="29"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.ColumnSpan="3"
+                Grid.Column="0"
+                Grid.Row="4">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="9,0,9,0"
+                ZIndex="-1"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="Chartreuse"
+                FontSize="29"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.Column="4"
+                Grid.Row="4">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </TextBlock>
+            <StackPanel
+                ZIndex="-1"
+                HorizontalAlignment="Center"
+                Grid.Row="1"
+                Grid.Column="3"
+                Orientation="Horizontal">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="Chartreuse">
+                    ~~
+                </TextBlock>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="Chartreuse">
+                    :
+                </TextBlock>
+                <TextBlock
+
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="Chartreuse">
+                    ~~ ~~
+                </TextBlock>
+            </StackPanel>
+            <ListBox
+                HorizontalAlignment="Right"
+                Width="350"
+                ZIndex="-1"
+                FontFamily="DSEG14 Classic"
+                Grid.Row="2"
+                Background="Transparent"
+                Foreground="Chartreuse"
+                Grid.Column="3"
+                Grid.RowSpan="3">
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Foreground="Wheat"
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~✓
+                </ListBoxItem>
+            </ListBox>
+        </Grid>
+    </Grid>
+</UserControl>

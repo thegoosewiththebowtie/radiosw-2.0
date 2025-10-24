@@ -1,0 +1,380 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:radiosw.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        SystemDecorations="None"
+        WindowState="FullScreen"
+        x:Class="radiosw.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Width="800" Height="600"
+        CanResize="False"
+        Title="radiosw">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+    <Grid>
+        <ContentControl
+            IsVisible="True"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Top"
+            HorizontalContentAlignment="Left"
+            Name="Off"
+            ZIndex="10"
+            Content="{Binding _off_state_}" />
+        <Grid
+            Name="MenuV"
+            IsVisible="False"
+            Grid.ColumnSpan="4"
+            ZIndex="10"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            Grid.RowSpan="6">
+            <ContentControl
+                IsVisible="True"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Stretch"
+                HorizontalContentAlignment="Stretch"
+                Name="MenuP"
+                Content="{Binding _menu_}" />
+        </Grid>
+        <Grid
+            IsVisible="True"
+            Name="tGrid"
+            ZIndex="1"
+            Background="Black"
+            ShowGridLines="False"
+            RowDefinitions="20, 60, 290, 30, 100, 100"
+            ColumnDefinitions="100, 150, 100, 350">
+            <Image
+                Width="350"
+                Height="350"
+                Name="Art"
+                HorizontalAlignment="Center"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Source="../Assets/floppy_disk.png" />
+            <Rectangle
+                HorizontalAlignment="Center"
+                ZIndex="-1"
+                Width="350"
+                Height="350"
+                Fill="#101010"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3" />
+
+            <TextBlock
+                FontFamily="DSEG14 Classic"
+                Name="NowTimeBlock"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="Chartreuse"
+                Grid.Row="3"
+                Grid.Column="0">
+                00:00
+            </TextBlock>
+            <TextBlock
+                ZIndex="-1"
+                FontFamily="DSEG14 Classic"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="#101010"
+                Grid.Row="3"
+                Grid.Column="0">
+                ~~:~~
+            </TextBlock>
+            <ProgressBar
+                CornerRadius="0"
+                Name="Bar"
+                Background="#101010"
+                Foreground="Chartreuse"
+                Grid.Column="1"
+                Grid.Row="3"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Stretch" />
+            <TextBlock
+                FontFamily="DSEG14 Classic"
+                Name="AllTimeBlock"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="Chartreuse"
+                Grid.Column="2"
+                Grid.Row="3">
+                00:00
+            </TextBlock>
+            <TextBlock
+                ZIndex="-1"
+                FontFamily="DSEG14 Classic"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="#101010"
+                Grid.Column="2"
+                Grid.Row="3">
+                ~~:~~
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="9,0,9,0"
+                Name="MainText"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="Chartreuse"
+                FontSize="29"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.ColumnSpan="3"
+                Grid.Column="0"
+                Grid.Row="4">
+                Please insert a floppy disk and press load
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="9,0,9,0"
+                ZIndex="-1"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="#101010"
+                FontSize="29"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.ColumnSpan="3"
+                Grid.Column="0"
+                Grid.Row="4">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="15,0,15,0"
+                Name="status"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="Chartreuse"
+                FontSize="30"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.Column="3"
+                Grid.Row="4">
+                <LineBreak />
+                Status: Stand-by
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="15,0,15,0"
+                Name="mode0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="Chartreuse"
+                FontSize="30"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.Column="3"
+                Grid.Row="4">
+                Podcast mode.
+            </TextBlock>
+            <TextBlock
+                Width="350"
+                Height="120"
+                Padding="15,0,15,0"
+                ZIndex="-1"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="#101010"
+                FontSize="30"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.Column="4"
+                Grid.Row="4">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </TextBlock>
+            <StackPanel
+                Name="ClockMain"
+                HorizontalAlignment="Center"
+                Grid.Row="1"
+                Grid.Column="3"
+                Orientation="Horizontal">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Text="{Binding _clock_text_1_}"
+                    Foreground="Chartreuse"
+                    Name="Clock" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="Chartreuse"
+                    Name="sem">
+                    :
+                </TextBlock>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Text="{Binding _clock_text_2_}"
+                    Foreground="Chartreuse"
+                    Name="clock2" />
+            </StackPanel>
+
+            <StackPanel
+                ZIndex="-1"
+                HorizontalAlignment="Center"
+                Grid.Row="1"
+                Grid.Column="3"
+                Orientation="Horizontal">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="#101010">
+                    ~~
+                </TextBlock>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="#101010">
+                    :
+                </TextBlock>
+                <TextBlock
+
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="50"
+                    FontFamily="DSEG14 Classic"
+                    Foreground="#101010">
+                    ~~ ~~
+                </TextBlock>
+            </StackPanel>
+            <ListBox
+                Width="350"
+                FontFamily="DSEG14 Classic"
+                Grid.Row="2"
+                Name="EpList"
+                Background="Transparent"
+                Foreground="Chartreuse"
+                Grid.Column="4"
+                Grid.RowSpan="3">
+                <ListBox.Styles>
+                    <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+                        <Setter Property="Foreground" Value="Wheat" />
+                        <Setter Property="Background" Value="Transparent" />
+                    </Style>
+                </ListBox.Styles>
+            </ListBox>
+            <ListBox
+                HorizontalAlignment="Right"
+                Width="350"
+                ZIndex="-1"
+                FontFamily="DSEG14 Classic"
+                Grid.Row="2"
+                Background="Transparent"
+                Foreground="#101010"
+                Grid.Column="3"
+                Grid.RowSpan="3">
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+                <ListBoxItem
+                    Padding="10, 6, 10, 6">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~↓✓
+                </ListBoxItem>
+            </ListBox>
+            <TextBlock
+                Padding="9,0,9,0"
+                ZIndex="1"
+                IsVisible="False"
+                Name="WakeUp"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="red"
+                FontSize="26"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.ColumnSpan="4"
+                Grid.Column="0"
+                Grid.Row="5">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </TextBlock>
+            <TextBlock
+                Padding="9,0,9,0"
+                ZIndex="-1"
+                IsVisible="False"
+                Name="WakeUpBg"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Foreground="#101010"
+                FontSize="26"
+                FontFamily="DSEG14 Classic"
+                TextAlignment="Left"
+                Grid.ColumnSpan="4"
+                Grid.Column="0"
+                Grid.Row="5">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>
